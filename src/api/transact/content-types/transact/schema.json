@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transacts",
+  "info": {
+    "singularName": "transact",
+    "pluralName": "transacts",
+    "displayName": "Transact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "receiver": {
+      "type": "string"
+    },
+    "sender": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "float"
+    },
+    "account": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::account.account",
+      "inversedBy": "transacts"
+    }
+  }
+}
